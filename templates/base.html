@@ -1,0 +1,33 @@
+{% load static %}
+<html class="{% block extra_html_class %}{% endblock %}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static "mainapp/speedpy_favicon.png" %}" type="image/png">
+    <link rel="stylesheet" href="{% static "mainapp/styles.css" %}"/>
+    <!-- og tags -->
+    <meta property="og:title" content="{% block og_title %}SpeedPy Django SaaS Boilerplate{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}SpeedPy is a Django SaaS Boilerplate. It is a great starting point for your next Django SaaS project.{% endblock %}">
+    <meta property="og:image" content="{% static "mainapp/og.jpg" %}">
+    <script defer src="{% static "vendors/alpine.min.js" %}"></script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block extra_body_class %}{% endblock %}">
+{% block body %}
+    {% block nav %}
+        {% include "components/nav.html" %}
+    {% endblock %}
+    {% block content %}
+    {% endblock content %}
+
+{% endblock %}
+
+{% block extra_body %}
+{% endblock %}
+{% include "components/messages.html" %}
+<script src="{% static "flowbite/flowbite.min.js" %}"></script>
+<script src="{% static "mainapp/index.js" %}"></script>
+</body>
+</html>

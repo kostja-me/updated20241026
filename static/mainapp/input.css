@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For wagtail blog article */
+article {
+    @apply px-4 pt-4 pb-8 mx-auto max-w-3xl leading-6 text-black lg:max-w-4xl lg:px-8 lg:py-16 xl:max-w-6xl sm:px-6 sm:py-12;
+}
+
+article h1 {
+    @apply mx-0 mt-4 mb-4 text-4xl font-extrabold  lg:mb-4 lg:text-5xl lg:leading-none;
+}
+
+article h2 {
+    @apply mx-0 mt-6 mb-4 text-2xl font-bold lg:mb-3 lg:text-3xl;
+}
+
+article h3 {
+    @apply mx-0 mt-3 mb-2 text-xl font-bold lg:mb-3 lg:text-xl lg:leading-normal;
+}
+
+article h4 {
+    @apply mx-0 mt-3 mb-2 font-semibold leading-normal lg:mb-2;
+}
+
+article h5 {
+    @apply mx-0 mt-3 mb-2 font-semibold leading-normal lg:mb-2;
+}
+
+
+article p {
+    @apply mx-0 mt-0 mb-5 text-lg leading-8 text-gray-800 lg:mt-0 lg:mb-5;
+}
+
+article h1 + p {
+    @apply my-5 mx-0 text-2xl leading-8 text-gray-500 lg:my-5;
+}
+
+article ul {
+    @apply py-0 pr-0 pl-6 mx-0 mt-0 mb-2 text-lg leading-8 list-disc text-gray-500 lg:mt-0 lg:mb-4 lg:pl-6;
+}
+
+article ol {
+    @apply py-0 pr-0 pl-6 my-1 mx-0 text-lg leading-8 list-decimal text-gray-500 lg:my-4 lg:pl-6;
+}
+
+article li {
+    @apply pl-1 my-1 text-lg leading-3 text-left text-gray-500 lg:my-4 lg:pl-2;
+}
+
+
+article a {
+    @apply text-sky-600 cursor-pointer;
+}
+article a.headerlink {
+    @apply text-sky-600 cursor-pointer text-lg ml-2;
+}
+
+article blockquote {
+    @apply mx-0 mt-0 mb-6 text-lg italic font-bold leading-9 text-gray-900;
+}
+
+
+article img {
+    @apply block my-3 mx-auto max-w-full h-auto text-xl leading-7 text-left align-middle border-none text-slate-500 shadow-lg rounded-md;
+}
+
+
+
+article div.codehilite {
+    @apply my-5 px-1 py-2 rounded-md overflow-auto;
+}
+article div.codehilite pre {
+    @apply mx-2;
+}

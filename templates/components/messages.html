@@ -1,0 +1,19 @@
+{% if messages %}
+
+    {% for message in messages %}
+        <div class="alert fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-600 bg-indigo-200 divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow top-5 right-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
+             role="alert">
+            <div class="text-sm font-medium">{{ message }}</div>
+        </div>
+    {% endfor %}
+
+{% endif %}
+
+<script>
+
+  setTimeout(function () {
+    document.querySelectorAll('.alert').forEach(function (alert) {
+      alert.remove();
+    });
+  }, 5000);
+</script>
